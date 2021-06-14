@@ -265,10 +265,10 @@ ${a}❏OWNER MENU${a}
  ${a}❏GRACIAS A${a}
  ${a}│${a}
  ${a}│ • JUAN <editor>${a}
- ${a}│ • Destroyer 4.1 <nombre del bot>${a}
+ ${a}│ • Destroyer-Bot 4.1 <nombre del bot>${a}
  ${a}│ • Pokémon Go <público dirigido>${a}
  ${a}│${a}
- ${a}╰ • NOTA : PROYECTO Destroyer 4.1${a}
+ ${a}╰ • NOTA : PROYECTO Destroyer-Bot 4.1${a}
 `
 } else if (!isGroup) {
     return `
@@ -402,10 +402,10 @@ ${a}❏OWNER MENU${a}
  ${a}❏GRACIAS A${a}
  ${a}│${a}
  ${a}│ • JUAN <editor>${a}
- ${a}│ • Destroyer 4.1 <nombre del bot>${a}
+ ${a}│ • Destroyer-Bot 4.1 <nombre del bot>${a}
  ${a}│ • Pokémon Go <público dirigido>${a}
  ${a}│${a}
- ${a}╰ • NOTA : PROYECTO Destroyer 4.1${a}
+ ${a}╰ • NOTA : PROYECTO Destroyer-Bot 4.1${a}
 `
 }
 }
