@@ -103,7 +103,7 @@ const {
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
             + 'FN:Juan del Valle\n' 
-            + `ORG: Destroyer-4.1;\n`
+            + `ORG: Destroyer-Bot-4.1;\n`
             + `TEL;type=CELL;type=VOICE;waid=${owner}:${PhoneNumber('+' + owner).getNumber('international')}\n` 
             + 'END:VCARD' 
 
@@ -633,7 +633,7 @@ module.exports = msgHdlr = async (client , mek) => {
 				case 'nulis':
 					if (!isRegistered) return reply(ind.noregis())
 					if (isLimit(sender)) return reply(ind.limitend(pusname))
-					if (args.length < 1) return reply(`¿Dónde está el texto? ejemplo : ${prefix}nulis Destroyer es cool`)
+					if (args.length < 1) return reply(`¿Dónde está el texto? ejemplo : ${prefix}nulis Destroyer-Bot es cool`)
 					nul = body.slice(7)
 					reply('「❗」ESPERA HERMANO YO ESCRIBO PRIMERO, OK')
 					tak = await getBuffer(`https://api.zeks.xyz/api/nulis?text=${nul}&apikey=apivinz`)
