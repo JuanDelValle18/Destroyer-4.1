@@ -13,7 +13,7 @@ const {
     mentionedJid,
     processTime,
     Browser
-} = require('@JuanDelValle18/Destroyer-Web');
+} = require('@adiwajshing/baileys');
 const moment = require("moment-timezone") 
 const fs = require("fs") 
 const util = require('util')
@@ -103,7 +103,7 @@ const {
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
             + 'FN:Juan del Valle\n' 
-            + `ORG: Destroyer-Bot-4.1;\n`
+            + `ORG: Destroyer-4.1;\n`
             + `TEL;type=CELL;type=VOICE;waid=${owner}:${PhoneNumber('+' + owner).getNumber('international')}\n` 
             + 'END:VCARD' 
 
@@ -203,9 +203,9 @@ module.exports = msgHdlr = async (client , mek) => {
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
-			const time = moment.tz('Guatemala').format('DD/MM HH:mm:ss')
-			const timi = moment.tz('Guatemala').add(30, 'days').calendar();
-			const timu = moment.tz('Guatemala').add(20, 'days').calendar();
+			const time = moment.tz('América/Guatemala').format('DD/MM HH:mm:ss')
+			const timi = moment.tz('América/Guatemala').add(30, 'days').calendar();
+			const timu = moment.tz('América/Guatemala').add(20, 'days').calendar();
             body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : ''
 			budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 			var pes = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
@@ -633,7 +633,7 @@ module.exports = msgHdlr = async (client , mek) => {
 				case 'nulis':
 					if (!isRegistered) return reply(ind.noregis())
 					if (isLimit(sender)) return reply(ind.limitend(pusname))
-					if (args.length < 1) return reply(`¿Dónde está el texto? ejemplo : ${prefix}nulis Destroyer-Bot es cool`)
+					if (args.length < 1) return reply(`¿Dónde está el texto? ejemplo : ${prefix}nulis Destroyer es cool`)
 					nul = body.slice(7)
 					reply('「❗」ESPERA HERMANO YO ESCRIBO PRIMERO, OK')
 					tak = await getBuffer(`https://api.zeks.xyz/api/nulis?text=${nul}&apikey=apivinz`)
