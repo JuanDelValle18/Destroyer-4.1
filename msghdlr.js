@@ -13,7 +13,7 @@ const {
     mentionedJid,
     processTime,
     Browser
-} = require('@adiwajshing/baileys');
+} = require('@JuanDelValle18/Destroyer-Web');
 const moment = require("moment-timezone") 
 const fs = require("fs") 
 const util = require('util')
